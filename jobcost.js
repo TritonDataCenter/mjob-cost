@@ -9,6 +9,7 @@
 var computeTable = require('./billingComputeTable.json').billingTable;
 var pricing = require('./pricing.json').pricing;
 var stream = require('stream');
+var path = require('path');
 var util = require('util');
 
 
@@ -130,7 +131,7 @@ function main(jobid) {
 }
 
 function getJobPath(p) {
-    return (path.posix.normalize(p).replace(/\/$/, ''));
+    return (path.normalize(p).replace(/\/$/, ''));
 }
 
 if (require.main === module) {
