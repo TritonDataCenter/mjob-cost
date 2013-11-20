@@ -124,7 +124,7 @@ function main(jobid) {
         var gbSeconds = sumPhases(record.jobs, jobid);
         var cost = gbSeconds * pricing.compute;
 
-        console.log(cost);
+        console.log('$' + cost.toFixed(3));
     });
 
     process.stdin.pipe(lstream);
